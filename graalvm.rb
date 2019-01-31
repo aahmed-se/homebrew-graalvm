@@ -8,10 +8,9 @@ class Graalvm < Formula
   bottle :unneeded
 
   def install
-    mv "Contents/Home/bin/javac", "Contents/Home/bin/graal-javac"
     libexec.install Dir["*"]
-    bin.write_exec_script Dir["#{libexec}/Contents/Home/bin/graal-javac"]
-    bin.write_exec_script Dir["#{libexec}/Contents/Home/bin/native-image"]
+    bin.install_symlink "#{libexec}/Contents/Home/bin/javac" => "gjavac"
+    bin.install_symlink "#{libexec}/Contents/Home/bin/java" => "gjava"
+    bin.install_symlink "#{libexec}/Contents/Home/bin/native-image" => "gnative-image"
   end
-
 end
