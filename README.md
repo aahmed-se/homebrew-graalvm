@@ -11,7 +11,7 @@ brew tap aahmed-se/homebrew-graalvm
 brew install graalvm
 ```
 
-## Run comamnds
+## Run Hello World
 
 ```
 wget "https://raw.githubusercontent.com/leereilly/hello-world-java/master/HelloWorld.java"
